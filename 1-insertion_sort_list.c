@@ -31,8 +31,10 @@ void insertion_sort_list(listint_t **list)
 	current = *list;
 
     if (*list == NULL)
-        return (NULL);
-        
+    {
+        exit(EXIT_FAILURE);
+    }
+    
 	while (len < size)
 	{
 		while (current->next != NULL)
