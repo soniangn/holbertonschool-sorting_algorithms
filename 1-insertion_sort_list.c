@@ -1,5 +1,19 @@
 #include "sort.h"
 
+int list_size(listint_t **list)
+{
+    int size = 0;
+    listint_t *current;
+
+    current = *list;
+    while (current != NULL)
+	{
+		current = current->next;
+		size++;
+	}
+    return(size);
+}
+
 /**
  * insertion_sort_list - entry point
  * Description: function that sorts a doubly linked list
@@ -9,17 +23,16 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *node = NULL, *current, *azy;
-	int size = 0;
+	listint_t *node = NULL, *current = *list;
 	int len = 0;
-
-	azy = *list;
-	while (azy != NULL)
-	{
-		azy = azy->next;
-		size++;
-	}
+    int size = 0;
+	
+    size = list_size(&*list);
 	current = *list;
+
+    if (*list == NULL)
+        return (NULL);
+        
 	while (len < size)
 	{
 		while (current->next != NULL)
