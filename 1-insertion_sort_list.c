@@ -9,11 +9,11 @@
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *node = NULL, *current;
-	
-    if (*list == NULL || list == NULL)
-    {
-        exit(EXIT_FAILURE);
-    }
+
+	if (*list == NULL || list == NULL)
+	{
+		exit(EXIT_FAILURE);
+	}
 
 	current = *list;
 
@@ -27,7 +27,7 @@ void insertion_sort_list(listint_t **list)
 			current->next = node->next;
 			node->next = current;
 			current->prev = node;
-					
+
 			if (node->prev != NULL)
 				node->prev->next = node;
 			if (current->next != NULL)
@@ -40,5 +40,5 @@ void insertion_sort_list(listint_t **list)
 		}
 		else
 			current = node;
-	}	
+	}
 }
