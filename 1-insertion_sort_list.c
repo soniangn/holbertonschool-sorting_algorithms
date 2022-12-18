@@ -8,12 +8,12 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *node = NULL, *current = NULL;
-	
-    if (*list == NULL || list == NULL)
-    {
-        return;
-    }
+	listint_t *node = NULL, *current;
+
+	if (*list == NULL || list == NULL)
+	{
+		exit(EXIT_FAILURE);
+	}
 
 	current = *list;
 
@@ -27,8 +27,8 @@ void insertion_sort_list(listint_t **list)
 			current->next = node->next;
 			node->next = current;
 			current->prev = node;
-
-			if (node->prev != NULL) 
+					
+			if (node->prev != NULL)
 				node->prev->next = node;
 			if (current->next != NULL)
 				current->next->prev = current;
@@ -40,5 +40,5 @@ void insertion_sort_list(listint_t **list)
 		}
 		else
 			current = node;
-	}	
+	}
 }
