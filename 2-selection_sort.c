@@ -3,7 +3,7 @@
  * selection_sort - entry point
  * Description: function that sorts an array
  *            of integers in ascending order using the 
-                selection sort algorithm
+ *               selection sort algorithm
  * @array: the array of integers
  * @size: size of the array
  * Return: 0
@@ -27,12 +27,14 @@ void selection_sort(int *array, size_t size)
                 index = j;    
             }
         }
-        tmp = array[i];
-        array[i] = min;
-        array[index] = tmp;
-        print_array(array, size);
-
-        min = 0;
+        if (min < array[i] && min != array[i])
+        {
+            tmp = array[i];
+            array[i] = min;
+            array[index] = tmp;
+            print_array(array, size);
+            
+        }
         j = i + 1;
     }
 }
