@@ -1,20 +1,20 @@
 #include "sort.h"
 
 /**
- * bubble_sort - entry point
- * Description: function that sorts an array
- *            of integers in ascending order
- * @array: the array of integers
- * @size: size of the array
- * Return: 0
+ * bubble_sort - a function that sorts an array of int
+ *    in ascending order
+ * @array: the array of int to sort
+ * @size: the size of the array
+ * Return: /
  */
+
 void bubble_sort(int *array, size_t size)
 {
 	size_t i = 0;
-	size_t len = 0;
 	int tmp = 0;
+	size_t l = 0;
 
-	while (len < size)
+	while (l < size)
 	{
 		for (; i < size - 1; i++)
 		{
@@ -26,7 +26,7 @@ void bubble_sort(int *array, size_t size)
 				print_array(array, size);
 			}
 		}
-		len++;
+		l++;
 		i = 0;
 	}
 }
