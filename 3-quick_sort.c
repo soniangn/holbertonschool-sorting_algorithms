@@ -30,7 +30,7 @@ int partition(int *array, int low, int high, int size)
 {
 	int pivot = array[high];
 	int i = low;
-	int j, tmp;
+	int j;
 
 	for (j = low; j < high; j++)
 	{
