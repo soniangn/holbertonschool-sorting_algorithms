@@ -1,5 +1,12 @@
 #include "sort.h"
 
+/**
+ * swap - function to swap two value
+ * @a: first value to swap
+ * @b: first value to swap
+ * Return: /
+ */
+
 void swap(int *a, int *b)
 {
 	int tmp;
@@ -80,4 +87,4 @@ void quicksort(int *array, int low, int high, int size)
 void quick_sort(int *array, size_t size)
 {
 	quicksort(array, 0, size - 1, size);
-}	
+}
