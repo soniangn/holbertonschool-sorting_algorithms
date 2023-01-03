@@ -23,7 +23,7 @@ int partition(int *array, int low, int high, int size)
 			tmp = array[i];
 			array[i] = array[j];
 			array[j] = tmp;
-
+			i = i + 1;
 		}
 	}
 	tmp = array[i];
