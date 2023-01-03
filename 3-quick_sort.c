@@ -1,5 +1,14 @@
 #include "sort.h"
 
+void swap(int *a, int *b)
+{
+	int tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+
+}
 /**
  * selection_sort - a function that sorts an array of int
  *    in ascending order
@@ -16,21 +25,25 @@ int partition(int *array, int low, int high, int size)
 	int i = low;
 	int j, tmp;
 
-	for (j = low; j <= high; j++)
+	for (j = low; j < high; j++)
 	{
 		if (array[j] < pivot)
 		{
-			tmp = array[i];
-			array[i] = array[j];
-			array[j] = tmp;
+
+			if (array[i] != array[j])
+			{
+				swap(&array[i], &array[j]);
+				print_array(array, size);
+			}
 			i = i + 1;
 		}
 	}
-	tmp = array[i];
-	array[i] = array[high];
-	array[high] = tmp;
 
-	print_array(array, size);
+	if (array[i] != array[j])
+	{
+		swap(&array[i], &array[high]);
+		print_array(array, size);
+	}
 	return (i);
 }
 
