@@ -17,7 +17,7 @@ void swap(int *a, int *b)
 
 }
 /**
- * selection_sort - a function that sorts an array of int
+ * partition - a function that sorts an array of int
  *    in ascending order
  * @array: array of int to sort
  * @low: 0
